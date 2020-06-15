@@ -2,8 +2,9 @@
 
 /**
  * swap_nodes - swap_nodes from prev to next
- * @prev: prev node
- * @next: next node
+ * @prev_node: prev node
+ * @next_node: next node
+ * @list: linked list header
  * Return: nothing
  */
 void swap_nodes(listint_t *prev_node, listint_t *next_node, listint_t **list)
@@ -29,7 +30,7 @@ void swap_nodes(listint_t *prev_node, listint_t *next_node, listint_t **list)
 
 /**
  * insertion_sort_list - insertion_sort_list implementation
- * @listint_t: linked list header
+ * @list: linked list header
  * Return: nothing
  */
 void insertion_sort_list(listint_t **list)
