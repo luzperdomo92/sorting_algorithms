@@ -26,27 +26,27 @@ int partition(int array[], size_t size, int low, int high)
 	int j, i, pivot;
 
 	pivot = array[high];
-	i = (low - 1);
+	i = low;
 
 	for (j = low; j < high; j++)
 	{
 		if (array[j] <= pivot)
 		{
-			i++;
 			swap(&array[i], &array[j]);
 			if (i != j)
 			{
 				print_array(array, size);
 			}
+			i++;
 		}
 	}
 
-	swap(&array[i + 1], &array[high]);
+	swap(&array[i], &array[high]);
 	if (i != j)
 	{
 		print_array(array, size);
 	}
-	return (i + 1);
+	return (i);
 }
 
 
