@@ -6,7 +6,8 @@
  * @b: high range of the partiton
  * Return: nothing
  */
-void swap(int *a, int *b) {
+void swap(int *a, int *b)
+{
 	int t = *a;
 	*a = *b;
 	*b = t;
@@ -20,7 +21,8 @@ void swap(int *a, int *b) {
  * @high: high range of the partiton
  * Return: nothing
  */
-int partition(int array[], size_t size, int low, int high) {
+int partition(int array[], size_t size, int low, int high)
+{
 	int j, i, pivot;
 
 	pivot = array[high];
@@ -60,7 +62,8 @@ void recursive_quick_sort(int array[], size_t size, int low, int high)
 {
 	int pivot;
 
-	if (low < high) {
+	if (low < high)
+	{
 		pivot = partition(array, size, low, high);
 		recursive_quick_sort(array, size, low, pivot - 1);
 		recursive_quick_sort(array, size, pivot + 1, high);
