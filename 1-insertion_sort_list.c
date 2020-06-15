@@ -7,14 +7,18 @@
  * Return: nothing
  */
 void swap_nodes(listint_t *prev_node, listint_t *next_node){
-    listint_t *prev_aux, *next_aux;
+    listint_t *before_prev, *after_next;
 
-    prev_aux = prev_node->prev;
-    next_aux = next_node->next;
-    next_node->prev = prev_aux;
+    before_prev = prev_node->prev;
+    after_next = next_node->next;
+
+    next_node->prev = before_prev;
+    before_prev->next = next_node;
     next_node->next = prev_node;
+
     prev_node->prev = next_node;
-    prev_node->next = next_aux;
+    prev_node->next = after_next;
+    after_next->prev = prev_node;
 }
 
 
