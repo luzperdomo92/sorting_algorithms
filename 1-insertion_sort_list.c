@@ -25,7 +25,7 @@ void swap_nodes(listint_t *prev_node, listint_t *next_node){
  */
 void insertion_sort_list(listint_t **list)
 {
-    listint_t *iter, *aux, *inverse_aux;
+    listint_t *iter, *aux;
 
 
 	if (!list || !*list)
