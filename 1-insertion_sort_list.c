@@ -6,7 +6,8 @@
  * @next: next node
  * Return: nothing
  */
-void swap_nodes(listint_t *prev_node, listint_t *next_node, listint_t **list){
+void swap_nodes(listint_t *prev_node, listint_t *next_node, listint_t **list)
+{
 	listint_t *before_prev, *after_next;
 
 	before_prev = prev_node->prev;
