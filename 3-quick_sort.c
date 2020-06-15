@@ -26,8 +26,10 @@ int partition(int array[], size_t size, int low, int high) {
 	pivot = array[high];
 	i = (low - 1);
 
-	for (int j = low; j < high; j++) {
-		if (array[j] <= pivot) {
+	for (int j = low; j < high; j++)
+	{
+		if (array[j] <= pivot)
+		{
 			i++;
 			swap(&array[i], &array[j]);
 			if (i != j)
@@ -54,7 +56,8 @@ int partition(int array[], size_t size, int low, int high) {
  * @high: high range of the partiton
  * Return: nothing
  */
-void recursive_quick_sort(int array[], size_t size, int low, int high) {
+void recursive_quick_sort(int array[], size_t size, int low, int high)
+{
 	int pivot;
 
 	if (low < high) {
